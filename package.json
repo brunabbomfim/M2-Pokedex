@@ -1,0 +1,25 @@
+{
+  "name": "m2-pokedex-mvc",
+  "version": "1.0.0",
+  "description": "Projeto MVC de uma Pokedex",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunabbomfim/M2-Pokedex-MVC.git"
+  },
+  "author": "Bruna Bomfim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunabbomfim/M2-Pokedex-MVC/issues"
+  },
+  "homepage": "https://github.com/brunabbomfim/M2-Pokedex-MVC#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}

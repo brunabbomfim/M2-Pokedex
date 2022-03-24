@@ -15,15 +15,21 @@
     <section id="cards">
     <%pokedex.forEach((pokemon) =>{ %>
 
-      <div class="card" >
-            <img src="<%=pokemon.imagem %>" alt="">
-            <h2><%=pokemon.nome%></h2>
-            <p>Tipo: <%=pokemon.tipo%></p>
-            <p>Categoria: <%=pokemon.Categoria%></p>
-        </div>
+        <form action = "/detalhes">
+           <button>
+                <div class="card">
+                    <img src="<%=pokemon.imagem %>" alt="">
+                    <h2><%=pokemon.nome%></h2>
+                    <p>Tipo: <%=pokemon.tipo%></p>
+                    <p>Categoria: <%=pokemon.Categoria%></p>
+                </div>
+            </button>
+        </form>
     <% }) %>    
     </section>
-            <button id = "btcadastrar" type = "submit">Cadastrar</button>
+        <form action = "/cadastro">
+        <button id = "btcadastro" type = "submit">Cadastre seu Pokemon</button>
+        </form>   
     </section>
 </main>
 </body>

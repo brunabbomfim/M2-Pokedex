@@ -42,7 +42,6 @@ const pokedex = [
   Habilidade:"Clorofila"
   }
 ]
-
 app.get('/home',  (req, res) => {
   res.render('index', {pokedex})
 });
@@ -57,4 +56,4 @@ app.post('/add',  (req, res) => {
 });
 
 
-app.listen(3000 , () => console.log("Servidor rodando em http://localhost:3000/cadastro"));
+app.listen(3000 , () => console.log("Servidor rodando em http://localhost:3000/home"));

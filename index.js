@@ -1,12 +1,13 @@
 const express = require('express');
+const req = require('express/lib/request');
 const path = require("path");
 const app = express();
+app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded());
-app.set("view engine", "ejs");
-const pokedex = [
-  {
 
+const pokedex = [
+{
   id:1,
   nome: "Picachu",
   descricao: "Pikachu que pode gerar eletricidade poderosa tem bolsas nas bochechas que são extra macias e super elásticas.",
@@ -16,10 +17,8 @@ const pokedex = [
   Peso:6.0,
   Categoria:"Mouse",
   Habilidade:"Estático"
-  },
-
+},
 {
-
   id:2,
   nome: "Charmander",
   descricao: "Tem preferência por coisas quentes. Quando chove, diz-se que o vapor jorra da ponta de sua cauda.",
@@ -29,9 +28,9 @@ const pokedex = [
   Peso:8.5,
   Categoria:"Lagarto",
   Habilidade:"Chama"
-  },
-  {
-    id:3,
+},
+{
+  id:3,
   nome: "Vileplume",
   descricao: "Tem as maiores pétalas do mundo. A cada passo, as pétalas sacodem nuvens pesadas de pólen tóxico",
   tipo: "Grama, Veneno",
@@ -40,7 +39,7 @@ const pokedex = [
   Peso:18.6,
   Categoria:"Flor",
   Habilidade:"Clorofila"
-  }
+}
 ]
 app.get('/home',  (req, res) => {
   res.render('index', {pokedex})
@@ -48,12 +47,23 @@ app.get('/home',  (req, res) => {
 app.get('/cadastro',  (req, res) => {
   res.render('cadastro')
 });
-app.get('/detalhes',  (req, res) => {
-  res.render('detalhes')
-});
 app.post('/add',  (req, res) => {
-  res.send('Olá mundo')
+    const pokemon = req.body;
+    pokemon.id = pokedex.length+1;
+    pokedex.push(pokemon);
+    res.redirect('/home');
 });
 
+app.get('/detalhes/:id',  (req, res) => {
+  const id = +req.params.id - 1;
+  const pokemon = pokedex[id];
+  res.render('detalhes', {pokemon});
+  
+});
+
+app.get('/detalhes',  (req, res) => {
+
+  res.redirect('/home');
+});
 
 app.listen(3000 , () => console.log("Servidor rodando em http://localhost:3000/home"));

@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang = "pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
 </head>
 <body>
     <main>
-        <section id="cards">
-        <%pokedex.forEach((pokemon) =>{ %>
+        <section id = "detalhes">
+            <h2> 
+                DETALHES 
+            </h2>
+            <form action = "/detalhes" method="get">
     
-          <div class="card" >
-                <img src="<%=pokemon.imagem %>" alt="">
-                <h2><%=pokemon.nome%></h2>
-                <p><%=pokemon.descricao%></p>
-                <p>Tipo: <%=pokemon.tipo%></p>
-                <p>Altura: <%=pokemon.Altura%></p>
-                <p>Peso: <%=pokemon.Peso%></p>
-                <p>Categoria: <%=pokemon.Categoria%></p>
-                <p>Habilidade: <%=pokemon.Habilidade%> </p>
-            </div>
-        <% }) %>    
-        </section>
-    </main>
+                <img src="<%= pokemon.imagem %>"/>
+                <h2>
+                    Nome: <%=pokemon.nome%>
+                </h2>
+                <p>
+                    ID: <%=pokemon.id%>
+                </p>
+                <p>
+                    Tipo: <%=pokemon.tipo%>
+                </p>
+                <p>
+                    Categoria: <%=pokemon.Categoria%>
+                </p>
+                <p>
+                    Descrição: <%=pokemon.descricao%>
+                </p>
+                <p>
+                    Habilidade: <%=pokemon.Habilidade%> 
+                </p>
+                <p>
+                    Altura: <%=pokemon.Altura%> m
+                </p>
+                <p>
+                    Peso: <%=pokemon.Peso%> Kg   
+                </p>
+            
+                <button id = "retorno" type = "submit">Retornar ao início</button>
+        </form> 
+    </section>
+</main>
 </body>
+<script src = "script.js"></script>
 </html>

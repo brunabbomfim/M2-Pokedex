@@ -5,7 +5,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded());
-
+const port = process.env.PORT || 3000;
 const pokedex = [
 {
   id:1,
@@ -64,4 +64,4 @@ app.get('/detalhes',  (req, res) => {
   res.redirect('/home');
 });
 
-app.listen(3000 , () => console.log("Servidor rodando em http://localhost:3000/home"));
+app.listen( port, ()=> console.log(`Servidor rodando em http://localhost: ${port}`));

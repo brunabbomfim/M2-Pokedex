@@ -6,7 +6,7 @@ const btPokedex = document.getElementById("#btPokedex");
     });
         btPokedex.addEventListener("click", () => { 
             alert("Você será redirecionado para outro site!");
-            window.open("https://www.pokemon.com/br/pokedex/");
+            window.open("https://www.pokemon.com/br/pokedex");
         });
          
                 

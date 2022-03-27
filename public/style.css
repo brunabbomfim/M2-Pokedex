@@ -17,14 +17,22 @@
 body#index{ 
     background-image: radial-gradient(white , rgb(175, 173, 173));
     background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 800px;    
 }
 header#titulo{
     background: radial-gradient(red , rgb(189, 2, 2));
     padding: 2%;
 }
 body#bCadastro{ 
-    background-image: radial-gradient(rgb(253, 113, 113), rgb(250, 197, 197));
+    background-image: radial-gradient(rgb(248, 77, 77), rgb(250, 197, 197));
     background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    min-height: 800px;
 }
 h1 {
     text-align: center;
@@ -32,9 +40,11 @@ h1 {
 section#cards{
     display:flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     margin-top: 2rem;
 }
 section#cards div.card{
+    background-color: transparent;
     width: 20rem;
     box-shadow: 5px 5px 5px 5px rgb(255, 136, 136);
     padding: 1rem;
@@ -62,19 +72,26 @@ section#cards div.card p{
     font-weight: normal;
     color:rgb(36, 0, 167)
 }
-button{
-    margin-block-end: 5rem;
-    padding: 2rem;
-    border-color: rgb(99, 114, 255);
+button#btcadastro{
+    border-color: transparent;
+    display: flex;
+    padding: 0.8rem;
+    width: 30%;
+    margin: 10rem auto;
+    font-size: 2.0rem;
+    justify-content: center; 
     outline:none;
     border-radius: 3rem;  
+    box-shadow: 5px 5px 5px 5px rgb(255, 136, 136);
 }
 
-section#cadastro{
+section.cadastro{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    padding: 5rem;
+    align-self: center;
+    padding: 3rem;
 }
 h2 {
     width: 100%;
@@ -82,40 +99,46 @@ h2 {
     font-family: 'Textos', serif;
     font-size: 3.0rem;
     color: rgb(3, 3, 156);
-}
-button#btPokedex{
-    display: flex;
-    justify-content: center;
-    flex-wrap: center;
-    align-items: center;
-    border-color: rgb(99, 114, 255);
-    outline:none;
-    border-radius: 3rem;  
-}
-section#cadastro form input{
-     width: 100%;
-     padding-bottom: 2rem;
-     padding: 0.8rem;
-     font-size: 1rem ;
-     outline: none;
-     border: solid 1px rgb(221, 217, 217);
-     margin: 0 1rem 1rem 1rem;
-
-}
-
-section#cadastro form label {
-    margin: 1rem;
-    border: solid 2px rgb(221, 217, 217);
     
 }
+button#btPokedex{
+    margin: 3rem;
+    border-color: rgb(99, 114, 255);
+    outline:none;
+    border-radius: 2rem;  
+    font-size: 1.5rem;
+}
+section.cadastro form{
+    width: 50%;
+    margin-left: 25%;
+}
+section.cadastro form input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem ;
+    outline: none;
+    border: solid 2px rgb(221, 217, 217);
+    margin: 0 1rem 1rem 1rem;
+}
 
-section#cadastro form button:hover{
-    background-color: rgb(171, 154, 218);
-    color:blue;
+section.cadastro form label {
+    margin: 1rem;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+}
 
+section.cadastro form button{
+    display: flex;
+    padding: 0.8rem;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    justify-content: center;
+}
+body.bdetalhes{
+    background-color: red;
 }
 button{
-
   background-color:transparent;
   border-color:#272262;
   color:#272262;
@@ -127,13 +150,6 @@ button{
   cursor:pointer;
   outline:none;
   transition:all 0.3s ease-out;
-  
-}
-.justify-center{
-    display:flex;
-    justify-content:center;
-    margin-block-end: 4rem;
-    
 }
 button:hover{
     background-color: rgb(166, 166, 248);

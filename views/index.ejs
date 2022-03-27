@@ -13,7 +13,7 @@
     </header>  
     <section id = "cards">
         <%pokedex.forEach((pokemon) =>{ %>
-        <a href = "/detalhes/<%= pokemon.id %>" >
+        <a href = "/detalhes/<%= pokemon.id %>">
            <button id = "btCard">
                 <div class = "card">
                     <img src="<%= pokemon.imagem %>" alt="Imagem Pojpemon"/>
@@ -29,7 +29,7 @@
                 </div>
             </button>
         </a>
-    <% }) %> 
+        <% }) %> 
     </section>
     <section> 
         <form action = "/cadastro">

@@ -15,7 +15,7 @@ const pokedex = [
   imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
   Altura:0.4,
   Peso:6.0,
-  Categoria:"Mouse",
+  categoria:"Mouse",
   Habilidade:"Estático"
 },
 {
@@ -26,7 +26,7 @@ const pokedex = [
   imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
   Altura:0.6,
   Peso:8.5,
-  Categoria:"Lagarto",
+  categoria:"Lagarto",
   Habilidade:"Chama"
 },
 {
@@ -37,7 +37,7 @@ const pokedex = [
   imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png",
   Altura:1.2,
   Peso:18.6,
-  Categoria:"Flor",
+  categoria:"Flor",
   Habilidade:"Clorofila"
 }
 ]

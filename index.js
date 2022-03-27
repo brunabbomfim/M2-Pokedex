@@ -58,11 +58,9 @@ app.get('/detalhes/:id',  (req, res) => {
   const id = +req.params.id - 1;
   const pokemon = pokedex[id];
   res.render('detalhes', {pokemon});
-  
 });
 
 app.get('/detalhes',  (req, res) => {
-
   res.redirect('/home');
 });
 

@@ -9,20 +9,21 @@
 </head>
 <body class = "bdetalhes">
     <main>
-        <header>
+        <header id = "titulo2">
             <h2> 
                 DETALHES 
             </h2>
         </header>
-        <section id = "detalhes">
+        <section class = "detalhe"> 
             <form action = "/detalhes" method ="get">
-                <div>
+                <div id = "detalhes">
                     <img src = "<%= pokemon.imagem %>"/>
+                    <b>
                     <h2>
                         Nome: <%=pokemon.nome%>
                     </h2>
                     <p>
-                        ID: <%=pokemon.id%>
+                        ID: <%=pokemon.id%> 
                     </p>
                     <p>
                         Tipo: <%=pokemon.tipo%>
@@ -48,5 +49,5 @@
     </section>
 </main>
 </body>
-<script src = "script.js"></script>
+<script src = "/JS/script.js"></script>
 </html>

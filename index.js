@@ -66,4 +66,4 @@ app.get('/detalhes',  (req, res) => {
   res.redirect('/home');
 });
 
-app.listen( port, ()=> console.log(`Servidor rodando em http://localhost${port}`));
+app.listen( port, ()=> console.log(`Servidor rodando em http://localhost:${port}`));

@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require('express');
 const req = require('express/lib/request');
 const path = require("path");
@@ -7,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname,"public")));
 app.use(express.urlencoded());
 
-const port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
 const pokedex = [
 {
@@ -67,5 +66,5 @@ app.get('/detalhes',  (req, res) => {
   res.redirect('/home');
 });
 
-app.listen(port, () => { 
-  console.log(`Servidor rodando em http://localhost:${port}/home`)});
+app.listen(port, () => 
+  console.log(`Servidor rodando em http://localhost:${port}/home`));

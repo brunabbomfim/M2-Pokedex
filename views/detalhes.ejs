@@ -9,10 +9,12 @@
 </head>
 <body class = "bdetalhes">
     <main>
-        <section id = "detalhes">
+        <header>
             <h2> 
                 DETALHES 
             </h2>
+        </header>
+        <section id = "detalhes">
             <form action = "/detalhes" method ="get">
                 <div>
                     <img src = "<%= pokemon.imagem %>"/>
@@ -35,10 +37,10 @@
                         Habilidade: <%=pokemon.Habilidade%> 
                     </p>
                     <p>
-                        Altura: <%=pokemon.Altura%> m
+                        Altura: <%=pokemon.Altura%>
                     </p>
                     <p>
-                        Peso: <%=pokemon.Peso%> Kg   
+                        Peso: <%=pokemon.Peso%>
                     </p>
                 </div>
                 <button id = "retorno" type = "submit">Retornar ao início</button>

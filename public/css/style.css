@@ -144,6 +144,11 @@ body.bdetalhes{
 }
 header#titulo2{
     margin: 2rem;
+    width: 100%;
+    text-align: center;
+    font-family: 'Textos', serif;
+    font-size: 3.0rem;
+    color: rgb(3, 3, 156);
 }
 section.detalhe{
     display: flex;
@@ -165,14 +170,6 @@ section.detalhe div#detalhes img{
     width: 30%;
     margin-top: 2rem;
 }  
-
-section.detalhe div#detalhes  h2 {
-    width: 100%;
-    text-align: center;
-    font-family: 'Texto2', serif;
-    font-size: 2.5rem;
-    padding-bottom: 3rem;
-}
 section.detalhe p{
     display:flex;
     justify-content: center;

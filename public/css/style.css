@@ -167,8 +167,9 @@ section.detalhe div#detalhes{
 section.detalhe div#detalhes img{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 30%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }  
 section.detalhe p{
     display:flex;
